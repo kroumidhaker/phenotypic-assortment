@@ -35,3 +35,13 @@ simulations.
 
 Tested with Python 3.12.14. Package versions are listed in requirements.txt.
 If you use these files, please cite the paper and this Zenodo record.
+
+
+LICENSES
+
+The Python scripts and source code in reproduce_figures.ipynb are licensed under the MIT License; see LICENSE.
+
+The numerical data in reference_results/data/ and figures in reference_results/figures/ are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Attribution: Dhaker Kroumi. Please cite the associated paper and the Zenodo archive when using these materials.
