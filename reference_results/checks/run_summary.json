@@ -1,0 +1,102 @@
+{
+  "release_version": "1.0.0",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "matplotlib": "3.10.8",
+  "direct_grouped_term_budget": 200000,
+  "algebraic_series_relative_tolerance": 1e-12,
+  "validation_comparisons": 18,
+  "maximum_validation_relative_difference": 6.938893903907228e-14,
+  "threshold_evaluation_counts_including_validation": {
+    "direct grouped finite sum": 25154,
+    "bounded algebraic finite-sum evaluation": 14
+  },
+  "figures": [
+    "fig1.png",
+    "fig2.png",
+    "fig3.png",
+    "fig4.png",
+    "fig5.png",
+    "fig5_threshold_vs_n.png",
+    "fig7_threshold_vs_L.png"
+  ],
+  "data_tables": {
+    "fig1_kernel.csv": {
+      "columns": [
+        "L",
+        "n",
+        "alpha",
+        "distance",
+        "helping_probability"
+      ],
+      "rows": 15
+    },
+    "fig2.csv": {
+      "columns": [
+        "L",
+        "n",
+        "alpha",
+        "mu",
+        "nu",
+        "threshold"
+      ],
+      "rows": 600
+    },
+    "fig3.csv": {
+      "columns": [
+        "L",
+        "n",
+        "alpha",
+        "mu",
+        "nu",
+        "threshold"
+      ],
+      "rows": 50
+    },
+    "fig4.csv": {
+      "columns": [
+        "L",
+        "n",
+        "alpha",
+        "mu",
+        "nu",
+        "threshold"
+      ],
+      "rows": 10000
+    },
+    "fig5.csv": {
+      "columns": [
+        "L",
+        "n",
+        "alpha",
+        "mu",
+        "nu",
+        "threshold"
+      ],
+      "rows": 14400
+    },
+    "fig5_threshold_vs_n.csv": {
+      "columns": [
+        "L",
+        "n",
+        "alpha",
+        "mu",
+        "nu",
+        "threshold"
+      ],
+      "rows": 30
+    },
+    "fig7_threshold_vs_L.csv": {
+      "columns": [
+        "L",
+        "n",
+        "alpha",
+        "mu",
+        "nu",
+        "threshold"
+      ],
+      "rows": 72
+    }
+  }
+}

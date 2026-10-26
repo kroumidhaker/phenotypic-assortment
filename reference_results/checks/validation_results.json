@@ -1,0 +1,185 @@
+[
+  {
+    "check": "grouping versus literal finite sum",
+    "L": 3,
+    "n": 1,
+    "alpha": 1.0,
+    "x": 0.5,
+    "relative_difference": 2.220446049250313e-16
+  },
+  {
+    "check": "grouping versus literal finite sum",
+    "L": 4,
+    "n": 3,
+    "alpha": 0.2,
+    "x": 0.1,
+    "relative_difference": 2.886579864025407e-15
+  },
+  {
+    "check": "grouping versus literal finite sum",
+    "L": 5,
+    "n": 3,
+    "alpha": 2.0,
+    "x": 1.0,
+    "relative_difference": 1.3322676295501878e-15
+  },
+  {
+    "check": "algebraic series versus direct finite sum",
+    "L": 5,
+    "n": 2,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "relative_difference": 0.0
+  },
+  {
+    "check": "algebraic series versus direct finite sum",
+    "L": 5,
+    "n": 5,
+    "alpha": 0.3,
+    "mu": 0.5,
+    "nu": 1.0,
+    "relative_difference": 2.220446049250313e-16
+  },
+  {
+    "check": "algebraic series versus direct finite sum",
+    "L": 100,
+    "n": 3,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "relative_difference": 1.1102230246251565e-16
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 5,
+    "n": 2,
+    "alpha": 4.0,
+    "mu": 0.5,
+    "nu": 85.96930867190788,
+    "threshold": 7.2606832410643865,
+    "reference": 7.260683241064374,
+    "relative_difference": 1.7763568394002505e-15
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 5,
+    "n": 2,
+    "alpha": 4.0,
+    "mu": 0.5,
+    "nu": 316.22776601683796,
+    "threshold": 23.299572187182232,
+    "reference": 23.299572187182267,
+    "relative_difference": 1.5543122344752192e-15
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 1,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 6.37498979736349,
+    "reference": 6.374989797363477,
+    "relative_difference": 1.9984014443252818e-15
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 2,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 4.452386320485742,
+    "reference": 4.452386320486051,
+    "relative_difference": 6.938893903907228e-14
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 3,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 3.8682617553689163,
+    "reference": 3.868261755368911,
+    "relative_difference": 1.3322676295501878e-15
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 4,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 3.5998474259185227,
+    "reference": 3.5998474259185222,
+    "relative_difference": 2.220446049250313e-16
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 5,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 3.449382987600075,
+    "reference": 3.449382987600077,
+    "relative_difference": 6.661338147750939e-16
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 6,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 3.3542974401704098,
+    "reference": 3.3542974401704067,
+    "relative_difference": 8.881784197001252e-16
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 7,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 3.2891881751079075,
+    "reference": 3.2891881751079026,
+    "relative_difference": 1.5543122344752192e-15
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 8,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 3.2419780810179226,
+    "reference": 3.241978081017922,
+    "relative_difference": 2.220446049250313e-16
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 9,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 3.2062522434071044,
+    "reference": 3.206252243407098,
+    "relative_difference": 1.9984014443252818e-15
+  },
+  {
+    "check": "independent adaptive integration",
+    "L": 100,
+    "n": 10,
+    "alpha": 1.0,
+    "mu": 0.5,
+    "nu": 1.0,
+    "threshold": 3.1783100712701247,
+    "reference": 3.1783100712701136,
+    "relative_difference": 3.552713678800501e-15
+  }
+]

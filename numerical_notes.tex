@@ -1,0 +1,135 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newcommand{\crit}{\left(b/c\right)^{*}_{n}(\alpha)}
+\newcommand{\Lap}{\mathcal L_n^{(L)}}
+\title{Numerical notes for the accompanying code and data}
+\author{Dhaker Kroumi}
+\date{Version 1.0.0}
+\begin{document}
+\maketitle
+\vspace{-1em}
+\begin{center}
+\emph{Phenotypic assortment and the evolution of cooperation\allowbreak\ in finite periodic phenotype spaces}
+\end{center}
+
+\section*{Scope and notation}
+The archive reproduces seven figures for the analytical weak-selection
+threshold in the large-population mutation scaling. It does not simulate
+the finite-population Moran process. The threshold is denoted by $\crit$;
+its dependence on the parameters $L$, $\mu$, and $\nu$ is left implicit.
+Here $L\geq2$ and $n\geq1$ are integers, $\alpha,\mu,\nu>0$,
+$\mu=Nu/2$, and $\nu=Nv/2$.
+
+\section*{Finite spectral expression}
+For $p=0,\ldots,L-1$, define
+\begin{equation*}
+ c_p=\cos(2\pi p/L),\qquad
+ \widehat\varphi(p)=\sum_{m=0}^{L-1}
+ e^{-\alpha\min(m,L-m)}e^{2\pi\mathrm{i}pm/L}.
+\end{equation*}
+The Fourier coefficients are real and positive for the kernel used here.
+The implementation uses the opposite Fourier sign, which gives the same
+coefficients because the kernel is even. For a mode
+$\mathbf p\in\{0,\ldots,L-1\}^n$, let
+\begin{equation*}
+ S_{\mathbf p}=n-\sum_{j=1}^{n}c_{p_j},\qquad
+ w_{\mathbf p}=L^{-n}\prod_{j=1}^{n}\widehat\varphi(p_j),\qquad
+ \lambda_{\mathbf p}=\frac{2\nu}{n}S_{\mathbf p}.
+\end{equation*}
+These weights sum to one. The generalized Laplace transform is the finite sum
+\begin{equation}\label{eq:transform}
+ \Lap(\alpha,x)=\sum_{\mathbf p}\frac{w_{\mathbf p}}{S_{\mathbf p}+nx},\qquad x>0.
+\end{equation}
+An equivalent form of the threshold avoids subtracting nearly equal
+Laplace transforms:
+\begin{equation}\label{eq:threshold}
+ \crit=1+(1+2\mu)\frac{U}{V},
+\end{equation}
+where
+\begin{align}
+ U&=\sum_{\mathbf p}\frac{w_{\mathbf p}}
+ {(\lambda_{\mathbf p}+1)(\lambda_{\mathbf p}+2\mu+1)},\label{eq:U}\\
+ V&=\sum_{\mathbf p}\frac{w_{\mathbf p}\lambda_{\mathbf p}(\lambda_{\mathbf p}+2\mu+2)}
+ {(\lambda_{\mathbf p}+1)(\lambda_{\mathbf p}+2\mu+1)(\lambda_{\mathbf p}+2\mu+3)}.\label{eq:V}
+\end{align}
+All summands are nonnegative and $V>0$. The zero mode contributes zero to $V$.
+
+The code first combines the modes $p$ and $L-p$, then combines coordinate
+permutations with the multinomial factor $n!/\prod_j k_j!$.
+This leaves $\binom{n+\lfloor L/2\rfloor}{n}$ terms. No mode is discarded.
+Direct grouped summation is used when this count is at most $200\,000$.
+All plotted thresholds use this method except $L=100$, $n=4,\ldots,10$
+in \texttt{fig3}.
+
+\newpage
+\section*{Large spectra and the truncation bound}
+The remaining seven values are computed from the same finite spectrum using
+a convergent series. This avoids enumerating, for example,
+$\binom{60}{10}=75\,394\,027\,566$ grouped terms for $L=100$, $n=10$.
+
+Regard $Z=1-S_{\mathbf p}/(2n)\in[0,1]$ as a random variable with
+probabilities $w_{\mathbf p}$, and define
+\begin{equation*}
+ M_k=\mathbb E[Z^k],\qquad J_k=\mathbb E[(1-Z)Z^k].
+\end{equation*}
+The code computes both by finite binomial sums over the independent
+one-coordinate spectra. In particular, $J_k$ is evaluated directly,
+not by subtracting $M_{k+1}$ from $M_k$.
+Equation~\eqref{eq:transform} also has the series representation
+\begin{equation*}
+ \Lap(\alpha,x)=\frac{1}{n(x+2)}\sum_{k=0}^{\infty}
+ \left(\frac{2}{x+2}\right)^k M_k.
+\end{equation*}
+Its remainder after $k=K$ is at most $[2/(x+2)]^{K+1}/(nx)$.
+
+For the threshold, write $B=4\nu$ and $a=1+2\mu$, so that
+$\lambda=B(1-Z)$. For $s\in\{1,a,a+2\}$ define
+$d_s=B+s$ and $q_s=B/d_s$. Let
+\begin{equation*}
+ A_k=\frac{\sum_{i=0}^{k}q_1^i q_a^{k-i}}{d_1d_a},\qquad
+ C_k=\frac{\sum_{i=0}^{k}q_1^i q_{a+2}^{k-i}}{d_1d_{a+2}}.
+\end{equation*}
+Expanding the reciprocal factors in Eqs.~\eqref{eq:U}--\eqref{eq:V} gives
+\begin{equation*}
+ U=\sum_{k=0}^{\infty} A_k M_k,\qquad
+ V=\frac{B}{2}\sum_{k=0}^{\infty}(A_k+C_k)J_k.
+\end{equation*}
+Let $U_K,V_K$ be the sums through $k=K$. Since $q_a,q_{a+2}\leq q_1<1$,
+their nonnegative remainders satisfy
+\begin{align*}
+ 0\leq U-U_K&\leq E_U=\frac{T_K}{d_1d_a},\\
+ 0\leq V-V_K&\leq E_V=\frac{B}{2}\left(\frac{1}{d_1d_a}
+                          +\frac{1}{d_1d_{a+2}}\right)T_K,\\
+ T_K&=\frac{q_1^{K+1}\bigl[(K+2)-(K+1)q_1\bigr]}{(1-q_1)^2}.
+\end{align*}
+Thus the exact threshold lies in the interval
+\begin{equation*}
+ 1+a\frac{U_K}{V_K+E_V}\ \leq\ \crit\ \leq\
+ 1+a\frac{U_K+E_U}{V_K}.
+\end{equation*}
+The code accepts $1+aU_K/V_K$ only when its maximum distance from these
+bounds, divided by that value, is at most $10^{-12}$. It raises an error
+if the available series orders do not meet this tolerance. The saved bounds
+cover series truncation; they do not include floating-point rounding.
+
+\section*{Checks and saved data}
+The notebook runs 18 comparisons: grouped versus ungrouped sums, the series
+versus direct sums, and independent adaptive integration, including all
+$L=100$ dimensions plotted. It also checks the special values
+$\mathcal L_1^{(3)}(1,1/2)=1+e^{-1}$ and
+$(b/c)^{*}_{1}(1)\approx12.45639491347548$ at $L=3$, $\mu=1/2$, $\nu=1$.
+Quadrature is used only in these checks, never to generate a figure.
+
+CSV files contain all values used in the plots; the two heat maps also have
+NumPy arrays. Their colors saturate at $10$, but the stored values and
+contour calculations use the raw thresholds. See \texttt{DATA\_DICTIONARY.txt}
+for grids and columns. The script \texttt{verify\_results.py} compares new
+results with the supplied data using relative tolerance $5\times10^{-11}$
+and absolute tolerance $5\times10^{-13}$.
+\end{document}

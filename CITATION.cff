@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite this Zenodo record and the associated paper when using these files."
+type: software
+title: "Code and data for Phenotypic assortment and the evolution of cooperation in finite periodic phenotype spaces"
+version: 1.0.0
+authors:
+  - family-names: Kroumi
+    given-names: Dhaker
+abstract: >-
+  Python code, a Jupyter notebook, numerical data, and seven figures for
+  a study of phenotype-dependent cooperation on finite periodic phenotype
+  spaces. The calculations evaluate the large-population weak-selection
+  threshold using finite spectral expressions.
+keywords:
+  - evolutionary game theory
+  - cooperation
+  - phenotypic assortment
+  - Moran process
+  - finite periodic phenotype space
+  - weak selection

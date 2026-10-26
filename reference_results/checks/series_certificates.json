@@ -1,0 +1,112 @@
+[
+  {
+    "alpha": 1.0,
+    "L": 5,
+    "n": 2,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 4.628096964406819,
+    "absolute_truncation_bound": 8.046896482483135e-13,
+    "relative_truncation_bound": 1.7387052484788426e-13
+  },
+  {
+    "alpha": 0.3,
+    "L": 5,
+    "n": 5,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 8.072684156828513,
+    "absolute_truncation_bound": 2.0179413695586845e-12,
+    "relative_truncation_bound": 2.499715497789853e-13
+  },
+  {
+    "alpha": 1.0,
+    "L": 100,
+    "n": 3,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 3.868261755368916,
+    "absolute_truncation_bound": 5.728750807065808e-13,
+    "relative_truncation_bound": 1.48096255355901e-13
+  },
+  {
+    "alpha": 1.0,
+    "L": 100,
+    "n": 4,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 3.5998474259185227,
+    "absolute_truncation_bound": 4.991562718714704e-13,
+    "relative_truncation_bound": 1.3866039662614525e-13
+  },
+  {
+    "alpha": 1.0,
+    "L": 100,
+    "n": 5,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 3.449382987600075,
+    "absolute_truncation_bound": 4.600764214046649e-13,
+    "relative_truncation_bound": 1.3337933858274325e-13
+  },
+  {
+    "alpha": 1.0,
+    "L": 100,
+    "n": 6,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 3.3542974401704098,
+    "absolute_truncation_bound": 4.360956040727615e-13,
+    "relative_truncation_bound": 1.300110117994206e-13
+  },
+  {
+    "alpha": 1.0,
+    "L": 100,
+    "n": 7,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 3.2891881751079075,
+    "absolute_truncation_bound": 4.2010839251815923e-13,
+    "relative_truncation_bound": 1.2772403710358615e-13
+  },
+  {
+    "alpha": 1.0,
+    "L": 100,
+    "n": 8,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 3.2419780810179226,
+    "absolute_truncation_bound": 4.085620730620576e-13,
+    "relative_truncation_bound": 1.260224661771237e-13
+  },
+  {
+    "alpha": 1.0,
+    "L": 100,
+    "n": 9,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 3.2062522434071044,
+    "absolute_truncation_bound": 3.9968028886505635e-13,
+    "relative_truncation_bound": 1.2465653308684738e-13
+  },
+  {
+    "alpha": 1.0,
+    "L": 100,
+    "n": 10,
+    "mu": 0.5,
+    "nu": 1.0,
+    "series_terms": 161,
+    "threshold": 3.1783100712701247,
+    "absolute_truncation_bound": 3.930189507173054e-13,
+    "relative_truncation_bound": 1.2365657909526937e-13
+  }
+]
